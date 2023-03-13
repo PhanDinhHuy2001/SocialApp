@@ -1,5 +1,5 @@
-import 'dotenv'
+import dotenv from "dotenv";
 
-require("dotenv").config();
 
-export const APP_URL = process.env.REACT_APP_BASE_URL;
+
+export const APP_URL = require('dotenv');
