@@ -13,7 +13,7 @@ const ProfilePage = () => {
   const [user, setUser] = useState(null);
   const { userId } = useParams();
   const token = useSelector((state) => state.token);
-  const isNonMobileScreens = useMediaQuery("(min-width:1000px");
+  const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
 
   const getUser = async () => {
     const response = await fetch(`${APP_URL}/users/${userId}`, {
@@ -26,7 +26,7 @@ const ProfilePage = () => {
 
   useEffect(() => {
     getUser();
-  }, []); //eslint-disable-line react-hooks/exhaustive-deps
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (!user) return null;
 
